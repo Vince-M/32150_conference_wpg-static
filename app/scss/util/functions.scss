@@ -2,7 +2,7 @@
 
 // throw an error if the parameter has a unit
 @function rem($pixel) {
-  @if math.isunitless($pixel) {
+  @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
   }
   

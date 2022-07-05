@@ -1,0 +1,12 @@
+@use '../util' as *;
+
+.card {
+  padding: rem(20);
+
+  &__button {
+    width: rem(16);
+    height: rem(16);
+    border-radius: rem(15);
+    background-color: var(--nwcLightGreen);
+  }
+}
