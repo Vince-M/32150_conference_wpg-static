@@ -1,0 +1,6 @@
+# Avoid project littered with files
+
+.DS_Store
+
+Node_Modules/
+node_modules/
