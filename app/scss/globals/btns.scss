@@ -1,0 +1,28 @@
+@use "../util" as *;
+
+.btn {
+  &__contact a,
+  &__login a {
+    font-family: var(--font-display);
+    font-size: rem(18);
+    font-weight: 700;
+    padding: rem(10) rem(20);
+    color: var(--nwcGreen);
+    background-color: var(--white);
+    border: rem(1) solid var(--white);
+    border-radius: rem(5);
+    margin-left: rem(20);
+    cursor: pointer;
+
+    @include breakpoint-down(medium) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background-color: var(--nwcLightGreen);
+      border: rem(1) solid var(--nwcLightGreen);
+      color: var(--white);
+      transition: color 250ms ease-in-out;
+    }
+  }
+}
