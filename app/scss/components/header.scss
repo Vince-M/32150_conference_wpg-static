@@ -1,0 +1,49 @@
+@use "../util" as *;
+
+.header {
+  background-color: var(--nwcGreen);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__logo img {
+    margin: rem(20) 0 rem(25) rem(20);
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    li {
+      font-family: var(--font-display);
+      font-size: rem(18);
+      font-weight: 700;
+      color: var(--white);
+      list-style: none;
+      margin-left: rem(25);
+
+      a:visited,
+      a:active {
+        color: var(--gold);
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

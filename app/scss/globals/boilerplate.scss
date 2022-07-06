@@ -20,7 +20,7 @@ body {
 .container {
   // max-width: rem(1200);
   // width: 80%;
-  width: min(90%, rem(1200));
+  width: min(90%, em(1200));
   margin-inline: auto;
 
   &__content {
