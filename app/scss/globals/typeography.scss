@@ -1,15 +1,15 @@
-@use '../util' as *;
+@use "../util" as *;
 
-h1, 
-h2, 
+h1,
+h2,
 h3,
 h4 {
   margin-top: 0;
   font-family: var(--font-display);
 }
 
-a, 
-a:visited, 
+a,
+a:visited,
 a:active {
   text-decoration: none;
 }
