@@ -1,4 +1,4 @@
-@use '../util' as *;
+@use "../util" as *;
 
 html {
   font-size: 100%;
@@ -15,4 +15,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-body);
+}
+
+.container {
+  // max-width: rem(1200);
+  // width: 80%;
+  width: min(90%, rem(1200));
+  margin-inline: auto;
+
+  &__content {
+  }
+}
+
+.panels {
+  height: rem(20);
+  background-color: var(--nwcLightGreen);
+  width: 100%;
 }
