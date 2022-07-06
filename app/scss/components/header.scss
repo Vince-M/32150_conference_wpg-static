@@ -12,12 +12,31 @@
 
   &__nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__media {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: rem(10);
+
+    input[type="text"] {
+      font-size: rem(16);
+      color: var(--lightGrey);
+    }
+
+    &--placeholder {
+      padding: rem(5);
+      border-radius: rem(5);
+      border: rem(1) solid var(--newGreen);
+    }
   }
 
   &__menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     ul {
       display: flex;
@@ -28,10 +47,15 @@
       font-family: var(--font-display);
       font-size: rem(18);
       font-weight: 700;
-      color: var(--white);
       list-style: none;
       margin-left: rem(25);
 
+      a {
+        color: var(--white);
+        cursor: pointer;
+      }
+
+      a:hover,
       a:visited,
       a:active {
         color: var(--gold);
