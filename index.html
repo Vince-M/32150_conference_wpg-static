@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NWC 2022 Wintering Partners Conference</title>
+
+    <meta
+      property="og:title"
+      content="Wintering Partners Gathering - winteringpartners.ca"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://winteringpartners.ca" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +23,9 @@
       rel="stylesheet"
     />
 
+    <title>NWC 2022 Wintering Partners Conference</title>
+
+    <!-- import scripts and styles -->
     <link rel="stylesheet" href="dist/style.css" />
     <script defer src="dist/script.js"></script>
   </head>
@@ -21,17 +33,53 @@
     <header class="header">
       <div class="overlay has-fade"></div>
       <!-- overlay has-fade -->
-      <div class="container header__section">
+      <div class="container header header__section">
         <nav class="nav">
-          <a class="header__logo" href="index.html">
-            <img src="img/" alt="WPG_logo" />
-          </a>
+          <div class="header header__logo">
+            <a href="index.html">
+              <img
+                src="img/winterPartnersGathering_175x85.svg"
+                alt="WPG_logo"
+                width="175"
+                height="85"
+              />
+            </a>
+          </div>
+          <!-- header__logo -->
 
+          <!-- hamburger menu -->
           <a id="btnHamburger" class="hamburger header__toggle" href="#">
             <span></span>
             <span></span>
             <span></span>
           </a>
+
+          <!-- header menu -->
+          <div class="header__nav">
+            <div class="media"></div>
+            <div class="header__menu">
+              <ul class="nav__list mobile__fade">
+                <li class="nav__item">
+                  <a class="nav__link" href="">Conference</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""></a>Tradeshow
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""></a>Pharmacy
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href=""></a>Store Awards
+                </li>
+                <li class="btn btn__contact nav__link">
+                  <a href=""></a>Contact
+                </li>
+                <li class="btn btn__contact nav__link">
+                  <a href=""></a>Log-In
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
       <!-- container header__section -->
