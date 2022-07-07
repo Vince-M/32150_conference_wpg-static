@@ -57,23 +57,63 @@
           <!-- header menu -->
           <div class="header__nav">
             <div class="header__media">
-              <input
-                class="header__media--placeholder"
-                type="text"
-                placeholder="what are you searching for?"
-              />
+              <div class="header__social">
+                <a href="#"
+                  ><img
+                    src="img/facebook.svg"
+                    width="25px"
+                    height="25px"
+                    alt="Facebook"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="img/twitter.svg"
+                    width="25px"
+                    height="20px"
+                    alt="Twitter"
+                /></a>
+              </div>
+              <!-- social -->
+              <div class="header__search">
+                <input
+                  class="header__search--placeholder"
+                  type="text"
+                  placeholder="what are you searching for?"
+                />
+              </div>
+              <!-- search -->
             </div>
+            <!-- header__media -->
             <div class="header__menu">
               <ul class="nav__list mobile__fade">
-                <li class="nav__item">
-                  <a class="nav__link" href="#">Conference</a>
+                <li class="nav__item has-submenu">
+                  <a tabindex="0">Conference</a>
+                  <ul class="submenu">
+                    <li class="subitem">Schedule</li>
+                    <li class="subitem">Victoria Inn</li>
+                    <li class="subitem">In the City</li>
+                  </ul>
                 </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">Tradeshow</a>
+
+                <li class="nav__item has-submenu">
+                  <a tabindex="0">Tradeshow</a>
+                  <ul class="submenu">
+                    <li class="subitem">Feature Items</li>
+                    <li class="subitem">Sponsors</li>
+                    <li class="subitem">Vendor List</li>
+                    <li class="subitem">Tradeshow Rotations</li>
+                  </ul>
                 </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">Pharmacy</a>
+
+                <li class="nav__item has-submenu">
+                  <a tabindex="0">Pharmacy</a>
+                  <ul class="submenu">
+                    <li class="subitem">Schedule</li>
+                    <li class="subitem">Victoria Inn</li>
+                    <li class="subitem">In the City</li>
+                  </ul>
                 </li>
+
                 <li class="nav__item">
                   <a class="nav__link" href="#">Store Awards</a>
                 </li>
