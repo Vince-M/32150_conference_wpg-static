@@ -1,2 +1,2 @@
-"use strict";console.log("Hello");var toggle=document.querySelector(".toggle"),menu=document.querySelector(".menu");function toggleMenu(){menu.classList.contains("active")&&menu.classList.remove("active")}toggle.addEventListener("click",toggleMenu,!1);var items=document.querySelectorAll(".item");function toggleItem(){this.classList.contains("submenu-active")?this.classList.remove("submenu-active"):menu.querySelector(".submenu-active")?(menu.querySelector(".submenu-active").classList.remove("submenu-active"),this.classList.add("submenu-active")):this.classList.add("submenu-active")}
+"use strict";console.log("Hello");
 //# sourceMappingURL=script.js.map
