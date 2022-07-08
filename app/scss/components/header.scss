@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 998;
 
   &__logo img {
     margin: rem(20) 0 rem(25) rem(20);

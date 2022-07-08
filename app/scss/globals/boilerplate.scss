@@ -18,10 +18,11 @@ body {
 }
 
 .container {
-  // max-width: rem(1200);
+  max-width: rem(1200);
+  margin: 0 auto;
   // width: 80%;
-  width: min(90%, em(1200));
-  margin-inline: auto;
+  // width: min(90%, em(1200));
+  // margin-inline: auto;
 
   &__content {
   }
