@@ -67,11 +67,14 @@
 
     li {
       font-family: var(--font-display);
-      font-size: rem(18);
+      font-size: rem(16);
       font-weight: 700;
-      letter-spacing: rem(2);
       list-style: none;
-      margin-left: rem(25);
+      margin-left: rem(16);
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
