@@ -1,0 +1,83 @@
+@use "../util" as *;
+
+.panels {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: rem(400);
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  &__halfWidth {
+    margin-bottom: rem(20);
+    height: auto;
+
+    &--conf h2,
+    &--pharm h2 {
+      font-family: var(--font-display);
+      font-size: rem(48);
+      color: var(--white);
+    }
+
+    &--conf {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-image: url("/img/panels_conference_1300x400-min.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 50%;
+      height: rem(400);
+      padding-right: rem(100);
+
+      @include breakpoint-down(medium) {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: rem(20);
+      }
+    }
+
+    &--pharm {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-image: url("/img/panels_pharmacy_1300x400-min.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 50%;
+      height: rem(400);
+      padding-left: rem(100);
+
+      @include breakpoint-down(medium) {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+      }
+    }
+  }
+
+  &__fullWidth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/img/panels_tradeshow_1920x400-min.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: cover;
+    margin-bottom: rem(20);
+    height: rem(400);
+
+    &--trade h2 {
+      font-family: var(--font-display);
+      font-size: rem(48);
+      color: var(--white);
+    }
+  }
+}
