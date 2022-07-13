@@ -25,41 +25,27 @@
       color: var(--white);
     }
 
-    &--conf {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      background-image: url("/img/panels_conference_1300x400-min.jpg");
-      background-repeat: no-repeat;
-      background-position: center top;
-      width: 50%;
-      height: rem(400);
-      padding-right: rem(100);
-
-      @include breakpoint-down(medium) {
-        width: 100%;
-        justify-content: center;
-        padding: 0;
-        margin-bottom: rem(20);
-      }
-    }
-
+    &--conf,
     &--pharm {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      background-image: url("/img/panels_pharmacy_1300x400-min.jpg");
+      justify-content: center;
       background-repeat: no-repeat;
       background-position: center top;
       width: 50%;
       height: rem(400);
-      padding-left: rem(100);
 
       @include breakpoint-down(medium) {
         width: 100%;
-        justify-content: center;
-        padding: 0;
       }
+    }
+
+    &--conf {
+      background-image: url("/img/panels_conference_1300x400-min.jpg");
+    }
+
+    &--pharm {
+      background-image: url("/img/panels_pharmacy_1300x400-min.jpg");
     }
   }
 

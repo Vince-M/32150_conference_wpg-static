@@ -1,30 +1,34 @@
 console.log("Hello");
 
-const toggle = document.querySelector(".toggle");
-const menu = document.querySelector(".menu");
+const btnHamburger = document.querySelector("#btnHamburger");
+const header = document.querySelector(".header");
+const overlay = document.querySelector(".overlay");
+const nav__list = document.querySelector(".nav__list");
+const header__nav = document.querySelector(".header__nav");
 
 /* Toggle mobile menu */
-function toggleMenu() {
-  if (menu.classList.contains("active")) {
-    menu.classList.remove("active");
+document.querySelector("#btnHamburger").addEventListener("click", function () {
+  console.log("click hamburger");
 
-    /* Hamburger menu goes here */
-  }
-}
-
-/* Event Listener */
-toggle.addEventListener("click", toggleMenu, false);
-
-const items = document.querySelectorAll(".item");
-
-/* Activate Submenu */
-function toggleItem() {
-  if (this.classList.contains("submenu-active")) {
-    this.classList.remove("submenu-active");
-  } else if (menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
-    this.classList.add("submenu-active");
+  if (header.classList.contains("open")) {
+    // Close hamburger menu
+    header.classList.remove("open");
+    overlay.classList.remove("fade-in");
+    overlay.classList.add("fade-out");
+    nav__list.classList.add("nav__list");
+    nav__list.classList.remove("nav__list--open");
+    header__nav.classList.add("header__nav");
+    header__nav.classList.remove("header__nav--open");
+    header__nav.classList.add("hide-for-mobile");
   } else {
-    this.classList.add("submenu-active");
+    // Open hamburger menu
+    header.classList.add("open");
+    overlay.classList.remove("fade-out");
+    overlay.classList.add("fade-in");
+    nav__list.classList.add("nav__list--open");
+    nav__list.classList.remove("nav__list");
+    header__nav.classList.remove("header__nav");
+    header__nav.classList.add("header__nav--open");
+    header__nav.classList.remove("hide-for-mobile");
   }
-}
+});
