@@ -46,6 +46,10 @@
 
     &--pharm {
       background-image: url("../img/panels_pharmacy_1300x400-min.jpg");
+
+      @include breakpoint-down(medium) {
+        margin-top: rem(20);
+      }
     }
   }
 
