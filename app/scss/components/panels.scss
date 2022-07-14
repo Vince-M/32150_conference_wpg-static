@@ -41,11 +41,11 @@
     }
 
     &--conf {
-      background-image: url("/img/panels_conference_1300x400-min.jpg");
+      background-image: url("../img/panels_conference_1300x400-min.jpg");
     }
 
     &--pharm {
-      background-image: url("/img/panels_pharmacy_1300x400-min.jpg");
+      background-image: url("../img/panels_pharmacy_1300x400-min.jpg");
     }
   }
 
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/img/panels_tradeshow_1920x400-min.jpg");
+    background-image: url("../img/panels_tradeshow_1920x400-min.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     width: cover;
