@@ -18,8 +18,8 @@ body {
 }
 
 .container {
-  max-width: rem(1200);
   width: 80%;
+  max-width: rem(1200);
   margin: 0 auto;
   // width: 80%;
   // width: min(90%, em(1200));
@@ -27,4 +27,8 @@ body {
 
   &__content {
   }
+}
+
+.row {
+  padding: 0 rem(20);
 }
