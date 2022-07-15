@@ -1,0 +1,41 @@
+@use "../util" as *;
+
+.sponsors {
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--nwcGreen);
+    padding: rem(20) 0;
+    color: var(--white);
+
+    h2 {
+      font-size: rem(48);
+      margin-bottom: rem(10);
+    }
+
+    h3 {
+      font-size: rem(28);
+      margin-bottom: 0;
+    }
+  }
+
+  &__norWester {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20);
+
+    &--logos img {
+      width: 80%;
+    }
+  }
+
+  &__furTrader {
+    margin-bottom: rem(60);
+  }
+}
