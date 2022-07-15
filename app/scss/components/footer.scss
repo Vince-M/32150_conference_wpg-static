@@ -4,19 +4,56 @@
   background-color: var(--nwcGreen);
   display: flex;
   padding-top: rem(45);
+  padding-bottom: rem(20);
+
+  .container {
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
+  }
 
   &__nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 
-    &--menu {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
+    &--login {
+      margin-left: rem(30);
+    }
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+    }
+
+    @include breakpoint-down(small) {
+      &--conference,
+      &--tradeshow,
+      &--featureItems,
+      &--pharmacy,
+      &--storeawards,
+      &--contact {
+        width: 50%;
+        margin-bottom: rem(30);
+      }
+
+      &--login {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    ul {
+      margin-top: 0;
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        margin-top: rem(8);
+      }
     }
   }
 
@@ -24,6 +61,74 @@
     img {
       width: rem(175);
       height: rem(85);
+      margin-right: rem(40);
+    }
+
+    @include breakpoint-down(medium) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 2;
+    align-items: flex-start;
+    margin-bottom: rem(20);
+
+    a {
+      color: var(--white);
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &--head {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--white);
+      font-size: rem(22);
+      margin-bottom: 0;
+    }
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: rem(1) solid var(--white);
+    padding-top: rem(20);
+
+    p {
+      font-size: rem(14);
+      color: var(--white);
+    }
+
+    &--links a {
+      margin-right: rem(20);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      color: var(--white);
+    }
+
+    &--social > a.twitter {
+      margin-left: rem(20);
     }
   }
 }

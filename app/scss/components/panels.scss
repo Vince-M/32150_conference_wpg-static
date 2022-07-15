@@ -22,7 +22,9 @@
     &--pharm h2 {
       font-family: var(--font-display);
       font-size: rem(48);
+      letter-spacing: rem(2);
       color: var(--white);
+      text-shadow: rem(3) rem(3) rem(5) var(--black);
     }
 
     &--conf,
@@ -61,13 +63,39 @@
     background-repeat: no-repeat;
     background-position: center top;
     width: cover;
-    margin-bottom: rem(20);
     height: rem(400);
 
     &--trade h2 {
       font-family: var(--font-display);
       font-size: rem(48);
+      letter-spacing: rem(2);
       color: var(--white);
+      text-shadow: rem(3) rem(3) rem(5) var(--black);
     }
   }
+
+  &__fullBanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nwcGreen);
+    width: cover;
+    margin-bottom: rem(20);
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: rem(23);
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0;
+      padding: rem(20) 0;
+      text-align: center;
+    }
+  }
+}
+
+.wpgCaps {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: rem(1);
 }
