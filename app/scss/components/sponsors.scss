@@ -22,20 +22,37 @@
     }
   }
 
-  &__norWester {
+  &__norWester,
+  &__furTrader {
     display: flex;
     flex-direction: row;
     flex: 3;
     align-items: center;
     justify-content: center;
     gap: rem(20);
+    text-align: center;
+    padding: rem(20) 0;
 
     &--logos img {
       width: 80%;
     }
   }
 
+  &__norWester {
+    flex-wrap: wrap;
+    flex: 3;
+
+    &--logos {
+      flex: 25%;
+    }
+  }
+
   &__furTrader {
-    margin-bottom: rem(60);
+    flex-wrap: wrap;
+    flex: 4;
+
+    &--logos {
+      flex: 10%;
+    }
   }
 }
