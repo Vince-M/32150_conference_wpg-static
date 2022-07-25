@@ -138,6 +138,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     a {
@@ -162,6 +163,7 @@
 
     ul {
       display: flex;
+      gap: rem(16);
       // flex-direction: row;
     }
 
@@ -172,13 +174,13 @@
       justify-content: center;
       font-family: var(--font-display);
       font-size: rem(17);
-      font-weight: 700;
+      font-weight: 500;
       list-style: none;
-      margin-left: rem(16);
+      // margin-left: rem(16);
 
-      &:first-child {
-        margin-left: 0;
-      }
+      // &:first-child {
+      //   margin-left: 0;
+      // }
 
       @include breakpoint-down(medium) {
         margin: rem(10) 0;
@@ -230,6 +232,7 @@
 
     a {
       color: var(--white);
+      padding: rem(16) 0;
       cursor: pointer;
 
       &:hover {
@@ -251,19 +254,26 @@
   position: relative;
 
   ul.submenu {
-    display: none;
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease-in-out;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     ul.submenu {
+      opacity: 1;
+      visibility: visible;
       display: flex;
       flex-direction: column;
 
       li.subitem {
         padding-left: 0;
         // margin-top: rem(10);
-        margin: rem(10) rem(30);
-        width: 100%;
+        margin: 0;
+        width: rem(192);
+        transition: background-color 200ms ease-in-out;
       }
     }
   }
@@ -283,7 +293,8 @@
   padding: 0;
   // left: em(-30);
   // min-width: rem(200);
-  top: em(24);
+  top: em(32);
+  margin-top: em(16);
 
   & li {
     margin-left: 0;
@@ -294,6 +305,22 @@
   // margin: em(10) 0 0 0;
   color: var(--white);
   width: 100%;
+  margin: 0;
+  padding: rem(8) 0;
+
+  &:hover,
+  &:focus {
+    background-color: var(--nwcLightGreen);
+  }
+
+  &:last-child {
+    padding-bottom: em(12);
+  }
+
+  a {
+    padding: 0;
+    gap: 0;
+  }
 }
 
 // Visibility
@@ -309,4 +336,10 @@
   @include breakpoint(large) {
     display: none;
   }
+}
+
+.drop {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
 }
