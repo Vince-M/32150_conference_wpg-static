@@ -1,7 +1,7 @@
 console.log("Hello");
 
 const btnHamburger = document.querySelector("#btnHamburger");
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const overlay = document.querySelector(".overlay");
 const nav__list = document.querySelector(".nav__list");
@@ -14,7 +14,7 @@ document.querySelector("#btnHamburger").addEventListener("click", function () {
 
   if (header.classList.contains("open")) {
     // Close hamburger menu
-    body.classList.remove("noscroll");
+    // body.classList.remove("noscroll");
     header.classList.remove("open");
     fadeElems.forEach(function (element) {
       element.classList.remove("fade-in");
@@ -27,7 +27,7 @@ document.querySelector("#btnHamburger").addEventListener("click", function () {
     header__nav.classList.add("hide-for-mobile");
   } else {
     // Open hamburger menu
-    body.classList.add("noscroll");
+    // body.classList.add("noscroll");
     header.classList.add("open");
     fadeElems.forEach(function (element) {
       element.classList.remove("fade-out");
