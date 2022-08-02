@@ -78,7 +78,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     flex: 2;
     align-items: flex-start;
     margin-bottom: rem(20);
@@ -110,13 +110,30 @@
     border-top: rem(1) solid var(--white);
     padding-top: rem(20);
 
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+
     p {
       font-size: rem(14);
       color: var(--white);
     }
 
+    &--links {
+      @include breakpoint-down(small) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: rem(10);
+      }
+    }
+
     &--links a {
       margin-right: rem(20);
+
+      @include breakpoint-down(small) {
+        margin-right: 0;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -125,10 +142,41 @@
 
     a {
       color: var(--white);
+      @include breakpoint-down(small) {
+        margin-top: rem(20);
+      }
+
+      a:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &--social {
+      @include breakpoint-down(small) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: rem(20);
+      }
     }
 
     &--social > a.twitter {
       margin-left: rem(20);
     }
+  }
+}
+
+.btn.btn__login.footer__nav--login {
+  color: var(--nwcGreen);
+
+  @include breakpoint-down(medium) {
+    margin-top: rem(20);
+    margin-bottom: rem(30);
+    text-align: center;
+  }
+
+  &:hover {
+    color: var(--white);
   }
 }

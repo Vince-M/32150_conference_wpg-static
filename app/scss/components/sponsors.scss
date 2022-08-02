@@ -53,6 +53,11 @@
   &__furTrader {
     flex-wrap: wrap;
 
+    @include breakpoint-down(medium) {
+      margin-top: rem(20);
+      margin-bottom: rem(20);
+    }
+
     &--logos {
       flex: 10%;
 
