@@ -1,0 +1,59 @@
+@use "../util" as *;
+
+.pages {
+  &__heading {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: rem(48);
+    color: var(--nwcGreen);
+  }
+
+  &__subhead {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: rem(40);
+    color: var(--nwcGreen);
+  }
+}
+
+.content {
+  &__logo {
+    margin-bottom: rem(60);
+
+    @include breakpoint-down(small) {
+      margin-bottom: rem(40);
+    }
+
+    &--victoriaInn {
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &--half-width {
+      display: flex;
+      flex-direction: row;
+      gap: rem(10);
+      width: 49%;
+      margin-bottom: rem(10);
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &--full-width {
+      margin-top: rem(10);
+      margin-bottom: rem(40);
+    }
+  }
+}
