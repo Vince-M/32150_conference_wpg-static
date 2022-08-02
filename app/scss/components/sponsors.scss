@@ -26,7 +26,6 @@
   &__furTrader {
     display: flex;
     flex-direction: row;
-    flex: 3;
     align-items: center;
     justify-content: center;
     gap: rem(20);
@@ -44,15 +43,26 @@
 
     &--logos {
       flex: 25%;
+
+      @include breakpoint-down(small) {
+        flex: 100%;
+      }
     }
   }
 
   &__furTrader {
     flex-wrap: wrap;
-    flex: 4;
 
     &--logos {
       flex: 10%;
+
+      @include breakpoint-down(medium) {
+        flex: 20%;
+      }
+
+      @include breakpoint-down(small) {
+        flex: 35%;
+      }
     }
   }
 }

@@ -225,6 +225,10 @@
     }
   }
 
+  &__item {
+    margin-left: rem(20);
+  }
+
   &__list,
   &__item {
     @include breakpoint-down(medium) {
