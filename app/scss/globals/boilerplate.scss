@@ -11,6 +11,10 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -34,9 +38,33 @@ body {
   // margin-inline: auto;
 
   &__content {
+    width: 60%;
+
+    @include breakpoint-down(medium) {
+      width: 80%;
+    }
+
+    @include breakpoint-down(small) {
+      width: 100%;
+    }
   }
 }
 
 .row {
   padding: 0 rem(20);
+}
+
+.breadcrumbs {
+  margin-bottom: rem(40);
+}
+
+.breadcrumb {
+  font-family: var(--font-body);
+  font-size: rem(14);
+  font-weight: 500;
+  color: var(--lightGrey);
+
+  &__current {
+    font-weight: 700;
+  }
 }
