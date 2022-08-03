@@ -101,11 +101,11 @@
   margin-bottom: rem(10);
 }
 
-ul li a {
+.menu a {
   color: var(--grey);
   border-bottom: rem(1) solid var(--grey);
 }
 
-ul li a:hover {
+.menu a:hover {
   border-bottom: none;
 }
