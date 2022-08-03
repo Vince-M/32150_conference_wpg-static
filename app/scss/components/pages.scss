@@ -88,6 +88,21 @@
   }
 }
 
+.victoriaInn {
+  font-family: var(--font-display);
+  font-size: rem(26);
+  font-weight: 500;
+
+  a {
+    color: var(--nwcGreen);
+
+    &:hover {
+      border-bottom: rem(2) solid var(--nwcGreen);
+      cursor: pointer;
+    }
+  }
+}
+
 .hours {
   padding-left: rem(10);
   color: var(--grey);
