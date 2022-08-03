@@ -13,6 +13,8 @@
     font-weight: 300;
     font-size: rem(40);
     color: var(--nwcGreen);
+    margin-top: rem(40);
+    margin-bottom: 0;
   }
 }
 
@@ -64,6 +66,7 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: space-around;
+    gap: rem(20);
     margin-top: rem(40);
     margin-bottom: rem(60);
     padding-bottom: rem(20);
@@ -72,6 +75,10 @@
     &--column {
       width: 50%;
       padding-left: rem(40);
+
+      @include breakpoint-down(small) {
+        padding-left: 0;
+      }
     }
   }
 
