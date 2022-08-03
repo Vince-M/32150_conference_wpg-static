@@ -62,7 +62,7 @@
     background-image: url("../img/panels_tradeshow_1920x400-min.jpg");
     background-repeat: no-repeat;
     background-position: center top;
-    width: cover;
+    background-size: cover;
     height: rem(400);
 
     &--trade h2 {
