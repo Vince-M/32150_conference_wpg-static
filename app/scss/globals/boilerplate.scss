@@ -15,6 +15,17 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: var(--nwcGreen);
+  font-weight: 700;
+  letter-spacing: rem(1);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--nwcLightGreen);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
