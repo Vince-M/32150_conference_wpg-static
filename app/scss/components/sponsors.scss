@@ -23,7 +23,8 @@
   }
 
   &__norWester,
-  &__furTrader {
+  &__furTrader,
+  &__mealSponsors {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,16 +34,16 @@
     padding: rem(20) 0;
 
     &--logos img {
-      width: 80%;
+      width: 100%;
     }
   }
 
   &__norWester {
     flex-wrap: wrap;
-    flex: 3;
+    gap: rem(40);
 
     &--logos {
-      flex: 25%;
+      flex: 15%;
 
       @include breakpoint-down(small) {
         flex: 100%;
@@ -52,6 +53,7 @@
 
   &__furTrader {
     flex-wrap: wrap;
+    gap: rem(40);
 
     @include breakpoint-down(medium) {
       margin-top: rem(20);
@@ -60,6 +62,28 @@
 
     &--logos {
       flex: 10%;
+
+      @include breakpoint-down(medium) {
+        flex: 20%;
+      }
+
+      @include breakpoint-down(small) {
+        flex: 35%;
+      }
+    }
+  }
+
+  &__mealSponsors {
+    flex-wrap: wrap;
+    gap: rem(100);
+
+    @include breakpoint-down(medium) {
+      margin-top: rem(20);
+      margin-bottom: rem(20);
+    }
+
+    &--logos {
+      flex: 5%;
 
       @include breakpoint-down(medium) {
         flex: 20%;

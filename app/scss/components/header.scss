@@ -42,7 +42,7 @@
   }
 
   &__logo {
-    // margin: rem(20) 0 rem(25) rem(20);
+    padding: rem(16) 0;
 
     img {
       width: rem(175);
@@ -73,7 +73,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: rem(10) 0 0;
 
     &--open {
       position: absolute;
@@ -90,10 +89,6 @@
       z-index: 990;
       margin: 0 auto;
       transition: all 300ms ease-in-out;
-
-      @include breakpoint-down(medium) {
-        top: rem(110);
-      }
     }
   }
 
@@ -161,11 +156,11 @@
       flex-direction: column;
     }
 
-    ul {
-      display: flex;
-      gap: rem(16);
-      // flex-direction: row;
-    }
+    // ul {
+    //   display: flex;
+    //   gap: rem(16);
+    //   flex-direction: row;
+    // }
 
     li {
       display: flex;
@@ -213,6 +208,7 @@
   }
 
   &__list {
+    display: flex;
     padding: 0;
     margin: 0;
 
@@ -220,19 +216,47 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      width: 100%;
       padding-left: 0;
       transition: all 300ms ease-in-out;
     }
   }
 
   &__item {
-    margin-left: rem(20);
+    &:hover,
+    &:focus {
+      ul.submenu {
+        // opacity: 1;
+        // visibility: visible;
+        // display: flex;
+        // flex-direction: column;
+        width: 100%;
+        // width: rem(192);
+
+        @include breakpoint(medium) {
+          width: 100%;
+          opacity: 1;
+          visibility: visible;
+          display: flex;
+          flex-direction: column;
+          // width: 100%;
+          width: rem(192);
+        }
+      }
+    }
   }
 
   &__list,
   &__item {
+    margin-left: rem(30);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
     @include breakpoint-down(medium) {
-      flex-direction: column;
+      // flex-direction: column;
+      display: none;
     }
 
     a {
@@ -241,15 +265,9 @@
       cursor: pointer;
 
       &:hover {
-        color: var(--gold);
-        transition: all 200ms ease-in-out;
+        text-decoration: none;
       }
     }
-
-    // a:hover,
-    // a:visited {
-    //   color: var(--gold);
-    // }
   }
 }
 
@@ -263,47 +281,81 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 300ms ease-in-out;
-  }
 
-  &:hover,
-  &:focus {
-    ul.submenu {
+    @include breakpoint-down(medium) {
       opacity: 1;
       visibility: visible;
-      display: flex;
-      flex-direction: column;
-
-      li.subitem {
-        padding-left: 0;
-        // margin-top: rem(10);
-        margin: 0;
-        width: rem(192);
-        transition: background-color 200ms ease-in-out;
-      }
     }
   }
+
+  // &:hover,
+  // &:focus {
+  //   ul.submenu {
+  //     opacity: 1;
+  //     visibility: visible;
+  //     display: flex;
+  //     flex-direction: column;
+  //     // width: 100%;
+  //     width: rem(192);
+
+  //     @include breakpoint-down(medium) {
+  //       // opacity: 0;
+  //       // visibility: hidden;
+  //       // display: none;
+  //       // flex-direction: column;
+  //       // width: 100%;
+  //     }
+
+  //     li.subitem {
+  //       // padding-left: 0;
+  //       // // margin-top: rem(10);
+  //       // margin: auto;
+  //       // width: rem(192);
+  //       // transition: background-color 200ms ease-in-out;
+  //     }
+  //   }
+  // }
 }
 
 .submenu {
-  // display: flex;
-  // flex-direction: column;
+  display: none;
   justify-content: center;
-  align-items: center;
   padding-left: 0;
-  text-align: center;
-  position: absolute;
-  // margin-top: em(20);
-  background-color: var(--nwcGreen);
-  // padding: 0 em(20) rem(20);
-  padding: 0;
-  // left: em(-30);
-  // min-width: rem(200);
-  top: em(32);
-  margin-top: em(16);
+  width: 100%;
+
+  @include breakpoint(large) {
+    display: none;
+    justify-content: center;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    background-color: var(--nwcGreen);
+    padding: 0;
+    top: em(32);
+    margin-top: em(16);
+  }
 
   & li {
     margin-left: 0;
   }
+}
+
+.submenu-active .submenu {
+  @include breakpoint-down(medium) {
+    display: block;
+    background-color: var(--nwcLightGreen);
+  }
+}
+
+.nav__item {
+  // width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.active .nav__item {
+  display: block;
 }
 
 .subitem {
@@ -347,4 +399,8 @@
   display: flex;
   flex-direction: column;
   z-index: 999;
+}
+
+.nav__item.has-submenu.submenu-active {
+  background-color: transparent;
 }

@@ -123,11 +123,15 @@
   margin-bottom: rem(10);
 }
 
-.menu a {
+.victoriaMenu a {
   color: var(--grey);
   border-bottom: rem(1) solid var(--grey);
+
+  &:hover {
+    border-bottom: none;
+  }
 }
 
-.menu a:hover {
-  border-bottom: none;
-}
+// .menu a:hover {
+//   border-bottom: none;
+// }
