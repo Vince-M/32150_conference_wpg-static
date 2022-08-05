@@ -50,6 +50,7 @@ body {
 
   &__content {
     width: 60%;
+    margin-bottom: rem(40);
 
     @include breakpoint-down(medium) {
       width: 80%;
