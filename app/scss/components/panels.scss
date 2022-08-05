@@ -19,7 +19,9 @@
     height: auto;
 
     &--conf h2,
-    &--pharm h2 {
+    &--pharm h2,
+    &--conf h2,
+    &--pharm h2 a {
       font-family: var(--font-display);
       font-size: rem(48);
       letter-spacing: rem(2);

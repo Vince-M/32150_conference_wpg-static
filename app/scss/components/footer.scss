@@ -166,17 +166,3 @@
     }
   }
 }
-
-.btn.btn__login.footer__nav--login {
-  color: var(--nwcGreen);
-
-  @include breakpoint-down(medium) {
-    margin-top: rem(20);
-    margin-bottom: rem(30);
-    text-align: center;
-  }
-
-  &:hover {
-    color: var(--white);
-  }
-}

@@ -26,4 +26,45 @@
       transition: color 250ms ease-in-out;
     }
   }
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.btn__back {
+  font-family: var(--font-display);
+  font-size: rem(18);
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: rem(10) rem(20);
+  color: var(--white);
+  background-color: var(--nwcGreen);
+  border: rem(1) solid var(--nwcGreen);
+  border-radius: rem(5);
+  margin-left: rem(20);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--nwcLightGreen);
+    border: rem(1) solid var(--nwcLightGreen);
+    color: var(--white);
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+  }
+}
+
+.btn.btn__login.footer__nav--login {
+  color: var(--nwcGreen);
+
+  @include breakpoint-down(medium) {
+    margin-top: rem(20);
+    margin-bottom: rem(30);
+    text-align: center;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
 }
