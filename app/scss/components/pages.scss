@@ -43,9 +43,20 @@
     &--half-width {
       display: flex;
       flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       gap: rem(10);
-      width: 49%;
+      // width: 100%;
       margin-bottom: rem(10);
+
+      img {
+        width: 50%;
+
+        @include breakpoint-down(small) {
+          flex-direction: column;
+          width: 100%;
+        }
+      }
 
       @include breakpoint-down(small) {
         flex-direction: column;

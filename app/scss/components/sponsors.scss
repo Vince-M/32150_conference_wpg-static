@@ -23,6 +23,95 @@
     }
   }
 
+  &__conference {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    // gap: 10px;
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+
+      @include breakpoint-down(small) {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+
+    &--half-width {
+      display: flex;
+      flex-direction: row;
+      border: rem(1) solid var(--nwcGreen);
+      gap: rem(10);
+      width: 49%;
+      height: rem(200);
+      padding: rem(20) rem(10);
+      margin-bottom: rem(10);
+      background-color: var(--white);
+
+      &:hover {
+        box-shadow: 0 3px 10px var(--nwcGreen);
+        transition: all 250ms ease-in-out;
+      }
+
+      @include breakpoint-down(medium) {
+        width: 100%;
+      }
+
+      @include breakpoint-down(small) {
+        height: auto;
+      }
+
+      img.sponsor-logo {
+        width: rem(250);
+
+        @include breakpoint-down(small) {
+          width: 100%;
+        }
+      }
+
+      h2.sponsor-head {
+        font-family: var(--font-display);
+        font-size: rem(26);
+        color: var(--nwcGreen);
+
+        @include breakpoint-down(small) {
+          font-size: rem(36);
+          text-align: center;
+          margin-top: rem(20);
+        }
+      }
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &--norwester,
+    &--furtrader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: rem(1) solid var(--nwcGreen);
+      padding-bottom: rem(20);
+      margin-bottom: rem(20);
+    }
+  }
+
   &__norWester,
   &__furTrader,
   &__mealSponsors {
