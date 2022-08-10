@@ -9,33 +9,40 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    width: 100%;
+    gap: rem(10);
+    margin-bottom: rem(60);
   }
 
   &__col {
     display: flex;
     flex-direction: column;
-    padding: rem(10);
-    flex: 4;
+    // padding: rem(10);
+    flex: 4 1 20%;
 
-    // @include breakpoint-down(medium) {
-    //   width: 50%;
-    //   flex: 2;
-    // }
+    @include breakpoint-down(medium) {
+      flex: 2 0 45%;
+    }
 
-    // @include breakpoint-down(small) {
-    //   width: 100%;
-    // }
+    @include breakpoint-down(small) {
+      flex: 1 0 100%;
+    }
   }
 }
 
 .vendor {
-  &__food {
-    border: rem(3) solid var(--nwcGreen);
-    padding: rem(10);
-    text-align: center;
-    line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: rem(10);
+  text-align: center;
+  line-height: 1.25;
+  height: rem(135);
+  background-color: var(--white);
+
+  &:hover {
+    box-shadow: 0 3px 10px var(--nwcGreen);
+    transition: all 250ms ease-in-out;
   }
 
   p {
@@ -43,13 +50,22 @@
     margin: 0;
   }
 
+  &__food {
+    // border: rem(5) solid var(--nwcGreen);
+    background-color: var(--nwcGreen);
+  }
+
   &__gm {
+    // border: rem(5) solid var(--ncrBlue);
+    background-color: var(--ncrBlue);
   }
 
   &__fs {
+    background-color: var(--weBlue);
   }
 
   &__scl {
+    background-color: var(--ncrOrange);
   }
 
   &__is {
@@ -59,14 +75,23 @@
 
   &__name {
     font-family: var(--font-display);
+    color: var(--white);
     font-size: rem(24);
-    color: var(--nwcGreen);
+    // color: var(--nwcGreen);
     margin-bottom: 0;
   }
 
   &__url {
+    font-size: rem(16);
+    color: var(--white);
+    border-bottom: rem(1) solid var(--white);
+
+    &:hover {
+      border-bottom: none;
+    }
   }
 
   &__booth {
+    color: var(--white);
   }
 }
