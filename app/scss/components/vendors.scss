@@ -1,0 +1,39 @@
+@use "../util" as *;
+
+.vendors {
+  display: flex;
+  &__row {
+  }
+
+  &__col {
+  }
+}
+
+.vendor {
+  &__food {
+    border: rem(3) solid var(--nwcGreen);
+  }
+
+  &__gm {
+  }
+
+  &__fs {
+  }
+
+  &__scl {
+  }
+
+  &__is {
+  }
+  &__id {
+  }
+
+  &__name {
+  }
+
+  &__url {
+  }
+
+  &__booth {
+  }
+}
